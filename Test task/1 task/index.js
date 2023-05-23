@@ -11,7 +11,7 @@ const createTimerAnimator = () => {
     let startCountdown = 
     setInterval(function() {  
       
-      seconds--;
+      
       
       
       
@@ -25,16 +25,20 @@ const createTimerAnimator = () => {
          secCountdown = seconds
        } 
        if  (seconds > 59 && seconds < 3600) {
-         minCountdown = Math.round(seconds / 60)
+         minCountdown = Math.floor(seconds / 60)
          secCountdown = seconds - (minCountdown*60)
-       } 
-       if (seconds > 3600 && seconds < 86400) {
-         hourCountdown = Math.round(seconds / 3600)
          
-         minCountdown = Math.round((seconds - (hourCountdown*3600))/hourCountdown)/60
-         secCountdown = seconds - ((hourCountdown*3600)+(minCountdown*60))
+          
        }
+        
+       if (seconds > 3600 && seconds < 86400) {
+         hourCountdown = Math.floor(seconds / 3600)
          
+         minCountdown = Math.floor((seconds - (hourCountdown*3600))/60)
+         secCountdown = seconds - ((hourCountdown*3600) + (minCountdown*60))
+        
+       }
+       seconds--;
        
      if (seconds == 0) {
         clearInterval(startCountdown)
