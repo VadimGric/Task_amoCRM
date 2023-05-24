@@ -17,9 +17,9 @@ const createTimerAnimator = () => {
       
     let secCountdown = '00'
     
-    let minCountdown = '00'
+    let minCountdown = '0'
     
-    let  hourCountdown = '00'
+    let  hourCountdown = '0'
    
       if (seconds < 60 ) {
          secCountdown = seconds
@@ -31,7 +31,7 @@ const createTimerAnimator = () => {
           
        }
         
-       if (seconds > 3600 && seconds < 86400) {
+       if (seconds > 3599 ) {
          hourCountdown = Math.floor(seconds / 3600)
          
          minCountdown = Math.floor((seconds - (hourCountdown*3600))/60)
@@ -46,9 +46,8 @@ const createTimerAnimator = () => {
       
     
     
-    
-    timerEl.innerHTML = `${hourCountdown}:${minCountdown}:${secCountdown}` 
-    
+    timerEl.innerHTML = `${hourCountdown=(hourCountdown<10)? '0' + hourCountdown:hourCountdown}:${minCountdown=(minCountdown<10)? '0' + minCountdown:minCountdown}:${secCountdown=(secCountdown<10)? '0' + secCountdown:secCountdown}`
+  
   
 
     
@@ -59,14 +58,15 @@ const createTimerAnimator = () => {
 const animateTimer = createTimerAnimator();
 
 inputEl.addEventListener('input', () => {
-  // Очистите input так, чтобы в значении
-  // оставались только числа
+  inputEl.value = inputEl.value.split(/\D/).join('')
 });
 
 buttonEl.addEventListener('click', () => {
   const seconds = Number(inputEl.value);
-
+  
   animateTimer(seconds);
+  
+  
 
   inputEl.value = '';
 });
