@@ -1,21 +1,55 @@
+.back{
+  background-image: url(./Group1.png ) ;
+  background-repeat: no-repeat;
+  background-color: #0E1014;
+}
+.ball{
+  display: inline-block
+}
 .nav {
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  padding: 15px 0;
-  color: white;
   
+  
+  font-size: 15px;
+  
+  color: rgb(255, 253, 253);
+}
+.nav li {
+  margin: 0px 10px;
+}
+.kontakt{
+ display: flex;
+ justify-content: space-around;
+ list-style: none;
+
+}
+.logo_2{ 
+  font-family: 'Montserrat';
+  font-style: normal;
+  
+  font-size: 10px;
+  
+ 
+  color:  #E4E5EA;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 header {
   padding-left: 10px;
-  background-color: black;
+  padding-top: 46px;
+}
+.spisok {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1px 0;
+  font-size: 18px;
+  color:  #E4E5EA;
+  
+}
+.spisok_2 {
+  margin-top: 25px;
+  font-size: 10px;
 }
 
-.spisok {
-  display: flex;
-  
-  
-}
 
 footer li{
   font-size: 10px;
@@ -26,16 +60,27 @@ footer li{
 
 
 main h1 {
-  font-size: 40px;
-  color: red;
+  font-family: 'Domine', serif;
+  font-family: 'Quantico', sans-serif;
+
+  font-size: 48px;
+  color: #E4E5EA;
   padding-top: 50px;
-  line-height: 50px;
+  line-height: 58px;
   font-weight: 400;
 }
 
 main h1 span {
-  font-size: 44px;
+  
+  font-style: normal;
+  font-size: 48px;
   font-weight: 900;
+  
+  background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
 }
 
 main h2 {
@@ -46,4 +91,63 @@ main h2 {
 
 main h3 {
   padding-top: 40px;
+  
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: #E4E5EA;
+}
+main h3 span {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  text-transform:uppercase;
+  background: linear-gradient(90deg, #FCB045 36.99%, #FD1D1D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+
+
+
+@media only screen and (max-width: 768px){
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 15px 0;
+    color: white; 
+  }
+  header {
+    padding-left: 10px;
+    background-color: black;
+  }
+  .spisok {
+    display: flex;  
+  }
+  footer li{
+    font-size: 10px;
+  }
+  main h1 {
+    font-size: 40px;
+    color: red;
+    padding-top: 50px;
+    line-height: 50px;
+    font-weight: 400;
+  }
+  main h1 span {
+    font-size: 44px;
+    font-weight: 900;
+  }
+  main h2 {
+    font-weight: 300;
+    font-size: 21px;
+    padding-top: 6px;
+  }
+  main h3 {
+    padding-top: 40px;
+  }
 }
