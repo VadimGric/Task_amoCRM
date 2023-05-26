@@ -6,6 +6,9 @@
 .ball{
   display: inline-block
 }
+body{
+  padding: 0;
+}
 .nav {
   
   
@@ -113,27 +116,28 @@ main h3 span {
 
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 500px){
   .nav {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
-    padding: 15px 0;
+    font-size: 10px;
+    padding: 15px 0px;
     color: white; 
   }
   header {
-    padding-left: 10px;
+    padding: 0 0;
+    
     background-color: black;
   }
   .spisok {
-    display: flex;  
+    display: none;
   }
   footer li{
     font-size: 10px;
   }
   main h1 {
     font-size: 40px;
-    color: red;
+    color: #E4E5EA;
     padding-top: 50px;
     line-height: 50px;
     font-weight: 400;
@@ -146,8 +150,47 @@ main h3 span {
     font-weight: 300;
     font-size: 21px;
     padding-top: 6px;
+    color: #E4E5EA;
   }
   main h3 {
     padding-top: 40px;
+    font-size: 10px;
   }
+  .hidden {
+    display: none;
+  }
+  .kontakt {
+    display:none;
+  }
+  .spisok_2{
+    list-style: none;
+ 
+   font-size: 8px;
+   color: white;
+  
+  }
+  main h3 {
+   padding-top: 40px;
+  
+   font-style: normal;
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 22px;
+   text-align: left;
+   color: #E4E5EA;
+}
+  .list_mob{
+   list-style: none;
+   color: #E4E5EA;
+   text-transform: uppercase;
+   font-size: 14px;
+}
+  .list_mob_footer{
+    list-style: none;
+    color:#E4E5EA;
+    font-size: 14px;
+    padding: 0;
+  }
+ 
+  
 }
